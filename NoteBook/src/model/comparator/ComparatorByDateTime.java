@@ -1,4 +1,4 @@
-package sixth.Homework.src.model.data.comparator;
+package sixth.Homework.src.model.comparator;
 
 import java.util.Comparator;
 

@@ -1,7 +1,7 @@
-package sixth.Homework.src.model.data;
+package sixth.Homework.src.model;
 
-import sixth.Homework.src.model.data.comparator.ComparatorByDateTime;
-import sixth.Homework.src.model.data.comparator.NotesComparator;
+import sixth.Homework.src.model.comparator.ComparatorByDateTime;
+import sixth.Homework.src.model.comparator.NotesComparator;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

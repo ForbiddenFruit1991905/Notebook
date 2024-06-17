@@ -1,4 +1,4 @@
-package sixth.Homework.src.model.data;
+package sixth.Homework.src.model;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

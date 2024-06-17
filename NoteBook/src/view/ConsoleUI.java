@@ -1,6 +1,6 @@
 package sixth.Homework.src.view;
 
-import sixth.Homework.src.model.data.Note;
+import sixth.Homework.src.model.Note;
 import sixth.Homework.src.presenter.Presenter;
 
 import java.time.LocalDate;

@@ -1,4 +1,6 @@
-package sixth.Homework.src.model.data.comparator;
+package sixth.Homework.src.model.comparator;
+
+import sixth.Homework.src.model.Note;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -13,7 +15,7 @@ public interface NotesComparator<T> extends Comparable<T>{
     LocalDate getDate();
     LocalTime getTime();
     LocalDateTime getTimeNote();
-    sixth.Homework.src.model.data.Note addNote(T note);
+    Note addNote(T note);
     T findById(int count_id);
     T removeNote(int count_id);
     List<T> getNotebook();

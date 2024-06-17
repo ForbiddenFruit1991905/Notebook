@@ -1,13 +1,12 @@
 package sixth.Homework.src.presenter;
 
-import sixth.Homework.src.model.data.Note;
-import sixth.Homework.src.model.data.NoteBookService;
+import sixth.Homework.src.model.Note;
+import sixth.Homework.src.model.NoteBookService;
 import sixth.Homework.src.view.View;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 public class Presenter {
     private NoteBookService noteBookService;
