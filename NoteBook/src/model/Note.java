@@ -91,26 +91,33 @@ public class Note implements NotesComparator<Note> {
 
     public String getInfo(){
 
-        String msg = "id: " +
+        String msg =
+                "**********************************************************" +
+                "\n" +
+                "id: " +
                 id +
                 "\n" +
-                ", имя: " +
+                "имя: " +
                 firstName +
                 "\n" +
-                ", фамилия: " +
+                "фамилия: " +
                 lastName +
                 "\n" +
+                "Дата и время события: " +
                 date +
                 " " +
                 time +
+                "\n" +
                 "Событие: " +
                 heading +
                 "\n" +
-                "Заметка:" +
+                "Заметка: " +
                 note +
                 "\n" +
                 "Дата и время записи: " +
-                timeNote;
+                timeNote +
+                "\n" +
+                "**********************************************************";
         
         return msg;
     }
