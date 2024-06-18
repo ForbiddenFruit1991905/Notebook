@@ -58,7 +58,7 @@ public class ConsoleUI implements View {
         System.out.println(time.format(tf));
         LocalDateTime ldt = LocalDateTime.now()/*.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))*/;
         System.out.println(scanner.nextLine());
-        System.out.println("Запись внесена ---> " +  "имя: " + firstname + ", фамилия: " + lastname + "\n" + "Событие: " + heading + "\n" + date + ", " + time + "\n" + "Заметка: " + note_txt   + "\n" + "Дата и время записи: " + ldt);
+        System.out.println("Запись внесена ---> " + "\n" +  "имя: " + firstname + ", фамилия: " + lastname + "\n" + "Дата и время события: " + date + ", " + time + "\n" + "Событие: " + heading + "\n"  + "Заметка: " + note_txt   + "\n" + "Дата и время записи: " + ldt);
         System.out.println();
         presenter.addNote(firstname, lastname, heading, note_txt, date, time, ldt);
     }
