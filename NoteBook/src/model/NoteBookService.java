@@ -10,25 +10,17 @@ import java.util.*;
 
 public class NoteBookService<T extends NotesComparator<T>> {
 
-    private Note note;
     private List<T> notebook;
-    private int count_id = 1;
-    NoteBookBuilder noteBookBuilder;
+    private NoteBuilder noteBuilder;
 
     public NoteBookService() {
         this.notebook = new ArrayList<>();
-        this.noteBookBuilder = new NoteBookBuilder();
-    }
-
-//    Добавить count_id
-    public void add(Note note) {
-        note.setId(count_id++);
-        notebook.add((T) note);
+        this.noteBuilder = new NoteBuilder();
     }
 
 //    Добавить новую запись
      public T addNote (String firstName, String lastName, String note, String heading, LocalDate date, LocalTime time, LocalDateTime timeNote) {
-         Note note_txt = noteBookBuilder.build(firstName, lastName, note, heading, date, time, timeNote);
+         Note note_txt = noteBuilder.build(firstName, lastName, note, heading, date, time, timeNote);
          notebook.add((T) note_txt);
          return (T) note_txt;
      }
