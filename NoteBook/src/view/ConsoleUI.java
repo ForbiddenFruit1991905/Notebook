@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 public class ConsoleUI implements View {
@@ -56,11 +57,16 @@ public class ConsoleUI implements View {
         LocalTime time = LocalTime.of(scanner.nextInt(), scanner.nextInt());
         DateTimeFormatter tf = DateTimeFormatter.ofPattern("HH:mm");
         System.out.println(time.format(tf));
-        LocalDateTime ldt = LocalDateTime.now()/*.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))*/;
+//        LocalDateTime ldt = LocalDateTime.now()/*.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))*/;
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+//        String str = ldt.format(formatter);
+
+        LocalDateTime ldt = LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         String str = ldt.format(formatter);
+
         System.out.println(scanner.nextLine());
-        System.out.println("Запись внесена ---> " + "\n" +  "имя: " + firstname + "\n" + "фамилия: " + lastname + "\n" + "Дата и время события: " + date + " " + time + "\n" + "Событие: " + heading + "\n"  + "Заметка: " + note_txt   + "\n" + "Дата и время записи: " + str);
+        System.out.println("Запись внесена ---> " + "\n" +  "имя: " + firstname + "\n" + "фамилия: " + lastname + "\n" + "Дата и время события: " + date.format(dtf) + " " + time.format(tf) + "\n" + "Событие: " + heading + "\n"  + "Заметка: " + note_txt   + "\n" + "Дата и время записи: " + str);
         System.out.println();
         presenter.addNote(firstname, lastname, heading, note_txt, date, time, ldt);
     }
